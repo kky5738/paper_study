@@ -18,5 +18,5 @@ class Transformer(nn.Module):
     
     def forward(self, x, z):
         c = self.encode(x)
-        y = self.encode(z, c) # z는 target인가?
+        y = self.decode(z, c) # z는 target인가?
         return y
